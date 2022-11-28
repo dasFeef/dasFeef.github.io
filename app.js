@@ -41,7 +41,7 @@ const sidebar = $(".index-sidebar");
 
 function addSidebar(){
     sidebar.css('--index-sidebar-visibility', 'visible');
-    let i = -20; 
+    let i = -17; 
     
     const interval = setInterval(() => {
         if(i === -1) clearInterval(interval);
@@ -55,7 +55,7 @@ function removeSidebar(){
     let i = 0; 
     
     const interval = setInterval(() => {
-        if(i === -20) clearInterval(interval), sidebar.css('--index-sidebar-visibility', 'hidden');
+        if(i === -17) clearInterval(interval), sidebar.css('--index-sidebar-visibility', 'hidden');
         i--;
         sidebar.css('--index-sidebar-offset-right', `${i}vw`);
         

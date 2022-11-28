@@ -14,8 +14,6 @@ body{
     height: 100vh;
 
     background-image: linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow-x: hidden;
 }
 
@@ -145,7 +143,7 @@ body{
     display: flex; 
     justify-content: center;
 
-    background-color: rgba(27, 27, 27, .3);
+    background-color: rgba(27, 27, 27, .5);
 }
 
 #index-aboutSection-headline{
@@ -171,6 +169,35 @@ body{
     padding: 4vh 4vw;
 }
 
+.index-aboutSection-btn{
+    z-index: 6;
+    position: absolute;
+    height: 7vh;
+    width: 7vh;
+    top: 21.5vh;
+    background-color: black;
+    border-radius: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color:rgb(150, 150, 150);
+
+    font-size: 5vh;
+    transition: all .1s ease-in-out;
+}
+
+.index-aboutSection-btn:hover{
+    transform: scale(1.25); 
+    color: white; 
+}
+
+#index-aboutSection-btn-toRight{
+    right: 2vh;
+}
+#index-aboutSection-btn-toLeft{
+    left: 2vh;
+}
+
 .index-footer{
     z-index: 6;
     width: 100vw;
@@ -179,6 +206,51 @@ body{
     position: absolute;
     top: 100vh;
 
-    background-color: black;
+    display: flex;
+    justify-content: center;
 
+    background-color: black;    
+}
+
+#index-footer-text{
+    z-index: 7;
+    position: absolute;
+    top: 5vh;
+}
+
+#index-footer-text{
+    z-index: 7;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 3vh;
+    text-align: center;
+    color: white;
+}
+
+.index-footer-ressources{
+    z-index: 7;
+    position: absolute; 
+    width: 90vw;
+    left: 5vw;
+    top: 15vh; 
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 2.25vh;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+}
+
+.index-footer-ressources a{
+    color: white;
+    height: 3vh;
+    text-decoration: none;
+    background-color: rgb(14, 14, 14);
+    padding: 1.5vh;
+    transition: all .08s ease-in;
+}
+.index-footer-ressources a:hover{
+    text-decoration: underline;    
+    transform: scale(1.25);
 }
