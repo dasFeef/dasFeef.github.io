@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Lifespan</title>
     <!--Jquery from cdn-->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -25,8 +25,9 @@
     
     
     <div class="index-navbar" id="index-navbar">
-        <i class="fa-solid fa-moon" id="icons-dark"></i>
-        <i class="fa-solid fa-lightbulb" id="icons-light"></i>
+        <i id="index-switch">
+            <i id="index-switch-btn"></i>
+        </i>
         <i class="fa-solid fa-bars" id="icons-bars"></i>
         <p id="index-navbar-heading">LIFESPAN</p>
         <div id="index-navbar-toggle"></div>
@@ -42,6 +43,15 @@
             <li>HOW TO</li>
             <li>QUELLENANGABE</li>
         </ul>
+    </div>
+
+    <div class="index-aboutSection" id="index-aboutSection">
+        <p id="index-aboutSection-headline">About this project...</p>
+        <p id="index-aboutSection-text">Our mission is quite the simple one -- To save the world. But how will we be able to achieve this ambitious sounding goal? Glad you asked!</p>
+    </div>
+
+    <div class="index-footer" id="index-footer">
+        <p id="index-footer-text"></p>
     </div>
 
     <div class="index-bodyfaker"></div>
