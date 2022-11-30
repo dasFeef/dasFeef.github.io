@@ -6,10 +6,15 @@ const indexSwitchButton = $("#index-switch-btn");
 let brightness = localStorage.getItem("view_brightness");
 if(!brightnessModes.includes(brightness)) localStorage.setItem("view_brightness", "dark"), brightness = 'dark';
 
+indexSwitchButton.show();
 
 if(brightness == 'light'){
-    indexSwitchButton.addClass("index-switch-light");
+
+    indexSwitchButton.css({"left": "var(--index-switch-btn-offset-light)", "background-color":  "var(--index-switch-btn-color-light)"});
+    indexSwitchButton.addClass("index-switch-btn-transition");
     overlay.hide();
+} else{
+    indexSwitchButton.addClass("index-switch-btn-transition");
 }
 
 indexSwitchClick();
@@ -20,7 +25,7 @@ function indexSwitchClick(){
         overlay.hide(), 
         localStorage.setItem("view_brightness", "light");
         brightness = 'light';
-        indexSwitchButton.css({'margin-left': '2.5vw', 'background-color': '#77EFA5'});
+        indexSwitchButton.css({"left": "var(--index-switch-btn-offset-light)", "background-color":  "var(--index-switch-btn-color-light)"});
         indexSwitchClick();
         });
     }else {
@@ -29,7 +34,7 @@ function indexSwitchClick(){
         overlay.show();
         localStorage.setItem("view_brightness", "dark");
         brightness = 'dark'
-        indexSwitchButton.css({'margin-left': '0vw', 'background-color': '#307f69'});
+        indexSwitchButton.css({"left": "var(--index-switch-btn-offset-dark)", "background-color":  "var(--index-switch-btn-color-dark)"});
         indexSwitchClick();
         });
     }

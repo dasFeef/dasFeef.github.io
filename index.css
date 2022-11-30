@@ -6,6 +6,10 @@
 :root{
     --index-sidebar-offset-right: -25vw;
     --index-sidebar-visibility: hidden; 
+    --index-switch-btn-offset-dark: 0%;
+    --index-switch-btn-offset-light: calc(100% - 41% - 2px);
+    --index-switch-btn-color-dark: #307f69; 
+    --index-switch-btn-color-light: #77EFA5; 
 }
 
 body{
@@ -69,22 +73,25 @@ body{
 }
 
 #index-switch-btn{
+    display: none;
     z-index: 4;
-    position: absolute;
-    background-color: #307f69;
-    top: -.5vh;
+    background-color: var(--index-switch-btn-color-dark);
     border-radius: 3vh;
-    border: .5vh solid white;
-    height: 4vh; 
-    width: 4vh;
+    height: 100%; 
+    width: 41%;
+    border: 2px solid white;
+    position: absolute;
+    top: -2px;
+    left: var(--index-switch-btn-offset-dark);
+}
+
+.index-switch-btn-transition{
     transition: all .8s ease-in-out;
 }
 
-.index-switch-light{       
-    margin-left: 2.5vw;
-    background-color: #77EFA5;
+.index-switch-btn-noTransition{
+    transition: none;
 }
-
 
 #icons-bars{
     z-index: 3;
