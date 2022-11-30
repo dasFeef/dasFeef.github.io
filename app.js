@@ -44,8 +44,40 @@ function indexSwitchClick(){
 const menu = $("#icons-bars");
 const sidebar = $(".index-sidebar");
 
-function addSidebar(){
-    sidebar.css('--index-sidebar-visibility', 'visible');
+
+menuClick(); 
+function menuClick(){
+    menu.click(() => {
+        menu.off("click");
+        console.log("CLICK!");
+        addSidebar();
+    })
+}
+
+let sidebarIsOut = false; 
+async function addSidebar(){
+
+    if(!sidebarIsOut){
+
+        sidebar.show().animate({right: "0vw"}, 500); 
+        setTimeout(() =>{
+            sidebar.css("position", "absolute");
+            sidebarIsOut = true; 
+            menu.click(menuClick());
+        }, 500)
+    } 
+    else {
+
+        sidebar.css("position", "fixed").animate({right: "-17vw"}, 500); 
+        setTimeout(() => {
+            sidebar.hide();
+            sidebarIsOut = false; 
+            menu.click(menuClick());
+        }, 500);
+    }
+}
+    
+    /*
     let i = -17; 
     
     const interval = setInterval(() => {
@@ -80,7 +112,8 @@ function menuClick(){
         }
     })
 
-}
+}*/
+
 /*
 window.scrollTo({
     top: 500,
