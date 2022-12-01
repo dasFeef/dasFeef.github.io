@@ -76,47 +76,32 @@ async function addSidebar(){
         }, 500);
     }
 }
-    
-    /*
-    let i = -17; 
-    
-    const interval = setInterval(() => {
-        if(i === -1) clearInterval(interval);
-        i++;
-        sidebar.css('--index-sidebar-offset-right', `${i}vw`);
-        
-    }, 15)
-}
-
-function removeSidebar(){
-    let i = 0; 
-    
-    const interval = setInterval(() => {
-        if(i === -17) clearInterval(interval), sidebar.css('--index-sidebar-visibility', 'hidden');
-        i--;
-        sidebar.css('--index-sidebar-offset-right', `${i}vw`);
-        
-    }, 15)
-}
-
-menuClick();
-function menuClick(){
-    menu.click(() => {
-        if(sidebar.css('--index-sidebar-visibility') == 'hidden'){
-            addSidebar();
-            menu.off("click"), setTimeout(() => {menuClick()}, 315);
-        }
-        else{
-            removeSidebar();
-            menu.off("click"), setTimeout(() => {menuClick()}, 315);
-        }
-    })
-
-}*/
-
 /*
 window.scrollTo({
     top: 500,
     behavior: 'smooth'
 });
 */
+
+const aboutBtnL = $("#index-aboutSection-btn-toLeft"); 
+const aboutBtnR = $("#index-aboutSection-btn-toRight");
+
+aboutClick();
+function aboutClick(){
+
+    aboutBtnL.click(() => {
+        moveAboutSection('left');
+    });
+
+    aboutBtnR.click(() => {
+        moveAboutSection('right');
+    });
+}
+
+const aboutSectionText = $(".index-aboutSection-text");
+
+function moveAboutSection(direction){
+
+    aboutSectionText.animate({left: "100vh"}, 2000)
+
+}

@@ -169,7 +169,7 @@ body{
     color: white;
 }
 
-#index-aboutSection-text{
+.index-aboutSection-text{
     z-index: 4;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -180,6 +180,11 @@ body{
     color: white;
     padding: 4vh 4vw;
 }
+
+#index-aboutSection-text-2, #index-aboutSection-text-3, #index-aboutSection-text-4{
+    display: none;
+}
+
 
 .index-aboutSection-btn{
     z-index: 6;
