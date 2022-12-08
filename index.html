@@ -9,10 +9,11 @@
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <!--index page js-->
-    <script defer src="app.js"></script>
+    <script defer src="skeleton.js"></script>
+    <script defer src="startup.js"></script>
 
     <!--css-->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="app.css">
 
     <!--fonts-->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
@@ -21,21 +22,19 @@
     <script src="https://kit.fontawesome.com/ddcc34e64d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     
-    
-    <div class="index-navbar" id="index-navbar">
-        <div id="index-switch">
-            <div id="index-switch-btn"></div>
+    <div class="navbar" id="navbar">
+        <div id="switch">
+            <div id="switch-btn"></div>
             </div>
-        <i class="fa-solid fa-bars" id="icons-bars"></i>
-        <p id="index-navbar-heading">LIFESPAN</p>
-        <div id="index-navbar-toggle"></div>
-        <div id="index-navbar-options"></div>
+        <i class="fa-solid fa-bars" id="sidebar-btn"></i>
+        <p id="navbar-heading">LIFESPAN</p>
+        <div id="navbar-toggle"></div>
+        <div id="navbar-options"></div>
     </div>
 
-    <div class="index-sidebar">
-        <ul id="index-sidebar-list">
+    <div class="sidebar">
+        <ul id="sidebar-list">
             <li>ABENTEUER BEGINNEN</li>
             <li>OUR MISSION</li>
             <li>INSPIRATION</li>
@@ -64,22 +63,22 @@
         
     </div>
 
-    <div class="index-footer" id="index-footer">
-        <p id="index-footer-text-1">The following ressources were used while building this site</p>
+    <div class="footer" id="footer">
+        <p id="footer-text-1">The following ressources were used while building this site</p>
 
-        <div class="index-footer-ressources">
-            <a href="https://jquery.com" id="index-footer-res1">jQuery</a>
-            <a href="https://fontawesome.com" id="index-footer-res2">Font Awsome</a>
-            <a href="https://google.com" id="index-footer-res3">Google</a>
-            <a href="https://google.com" id="index-footer-res1">EMPTY SLOT 3</a>
-            <a href="https://google.com" id="index-footer-res1">EMPTY SLOT 4</a>
-            <a href="https://google.com" id="index-footer-res1">EMPTY SLOT 5</a>
+        <div class="footer-ressources">
+            <a href="https://jquery.com" id="footer-res1">jQuery</a>
+            <a href="https://fontawesome.com" id="footer-res2">Font Awsome</a>
+            <a href="https://google.com" id="footer-res3">Google</a>
+            <a href="https://google.com" id="footer-res1">EMPTY SLOT 3</a>
+            <a href="https://google.com" id="footer-res1">EMPTY SLOT 4</a>
+            <a href="https://google.com" id="footer-res1">EMPTY SLOT 5</a>
         </div>
 
-        <p id="index-footer-text-2">© Felix Hohmann, 2022</p>
+        <p id="footer-text-2">© Felix Hohmann, 2022</p>
 
     </div>
 
-    <div class="index-bodyfaker"></div>
+    <div class="bodyfaker"></div>
 </body>
 </html>

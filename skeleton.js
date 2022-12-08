@@ -1,7 +1,7 @@
 //Dark/Light mode
 const brightnessModes = ["light", "dark"];
-const overlay = $(".index-bodyfaker");
-const indexSwitchButton = $("#index-switch-btn");
+const overlay = $(".bodyfaker");
+const indexSwitchButton = $("#switch-btn");
 
 let brightness = localStorage.getItem("view_brightness");
 if(!brightnessModes.includes(brightness)) localStorage.setItem("view_brightness", "dark"), brightness = 'dark';
@@ -10,11 +10,11 @@ indexSwitchButton.show();
 
 if(brightness == 'light'){
 
-    indexSwitchButton.css({"left": "var(--index-switch-btn-offset-light)", "background-color":  "var(--index-switch-btn-color-light)"});
-    indexSwitchButton.addClass("index-switch-btn-transition");
+    indexSwitchButton.css({"left": "var(--switch-btn-offset-light)", "background-color":  "var(--switch-btn-color-light)"});
+    indexSwitchButton.addClass("switch-btn-transition");
     overlay.hide();
 } else{
-    indexSwitchButton.addClass("index-switch-btn-transition");
+    indexSwitchButton.addClass("switch-btn-transition");
 }
 
 indexSwitchClick();
@@ -25,7 +25,7 @@ function indexSwitchClick(){
         overlay.hide(), 
         localStorage.setItem("view_brightness", "light");
         brightness = 'light';
-        indexSwitchButton.css({"left": "var(--index-switch-btn-offset-light)", "background-color":  "var(--index-switch-btn-color-light)"});
+        indexSwitchButton.css({"left": "var(--switch-btn-offset-light)", "background-color":  "var(--switch-btn-color-light)"});
         indexSwitchClick();
         });
     }else {
@@ -34,15 +34,15 @@ function indexSwitchClick(){
         overlay.show();
         localStorage.setItem("view_brightness", "dark");
         brightness = 'dark'
-        indexSwitchButton.css({"left": "var(--index-switch-btn-offset-dark)", "background-color":  "var(--index-switch-btn-color-dark)"});
+        indexSwitchButton.css({"left": "var(--switch-btn-offset-dark)", "background-color":  "var(--switch-btn-color-dark)"});
         indexSwitchClick();
         });
     }
 }
 
 //Sidebar 
-const menu = $("#icons-bars");
-const sidebar = $(".index-sidebar");
+const menu = $("#sidebar-btn");
+const sidebar = $(".sidebar");
 
 
 menuClick(); 
@@ -75,33 +75,4 @@ async function addSidebar(){
             menu.click(menuClick());
         }, 500);
     }
-}
-/*
-window.scrollTo({
-    top: 500,
-    behavior: 'smooth'
-});
-*/
-
-const aboutBtnL = $("#index-aboutSection-btn-toLeft"); 
-const aboutBtnR = $("#index-aboutSection-btn-toRight");
-
-aboutClick();
-function aboutClick(){
-
-    aboutBtnL.click(() => {
-        moveAboutSection('left');
-    });
-
-    aboutBtnR.click(() => {
-        moveAboutSection('right');
-    });
-}
-
-const aboutSectionText = $(".index-aboutSection-text");
-
-function moveAboutSection(direction){
-
-    aboutSectionText.animate({left: "100vh"}, 2000)
-
 }
