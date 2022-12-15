@@ -6,14 +6,21 @@
 :root{
     --sidebar-offset-right: -25vw;
     --sidebar-visibility: hidden; 
-    --switch-btn-offset-dark: 0%;
-    --switch-btn-offset-light: calc(100% - 41% - 2px);
-    --switch-btn-color-dark: #307f69; 
-    --switch-btn-color-light: #77EFA5; 
+    --themeToggle-offset-dark: 0%;
+    --themeToggle-offset-light: calc(100% - 41% - 2px);
+    --themeToggle-color-dark: #307f69; 
+    --themeToggle-color-light: #77EFA5; 
+
+    --theme-background-light: white; 
+    --theme-gradient-light: white;
+    --theme-color-light: white;
+
+    --theme-background-dark: white;
+    --theme-gradient-dark: white;
+    --theme-color-dark: white;
 }
 
 /* BACKGRROUND */
-
 body{
     width: 100%;
     height: 100vh;
@@ -85,14 +92,14 @@ body{
 #switch-btn{
     display: none;
     z-index: 4;
-    background-color: var(--switch-btn-color-dark);
+    background-color: var(--themeToggle-color-dark);
     border-radius: 3vh;
     height: 100%; 
     width: 41%;
     border: 2px solid white;
     position: absolute;
     top: -2px;
-    left: var(--switch-btn-offset-dark);
+    left: var(--themeToggle-offset-dark);
 }
 
 .switch-btn-transition{
